@@ -1,0 +1,51 @@
+CREATE TABLE AmUser(
+   users_id   INT NOT NULL,
+   user_name VARCHAR (50) NOT NULL,
+   u_username VARCHAR (50) NOT NULL,
+   u_password VARCHAR (50) NOT NULL,
+   user_tel INT (10) NOT NULL,
+   user_level VARCHAR (50) NOT NULL,
+   user_address VARCHAR (50) NOT NULL, 
+      
+   PRIMARY KEY (User_id )
+);
+
+CREATE TABLE AmStore(
+  store_id   INT NOT NULL,
+  user_id VARCHAR (50) NOT NULL,
+  user_name VARCHAR (50) NOT NULL,
+  product_id VARCHAR (50) NOT NULL,
+  product_name INT (50) NOT NULL,
+  product_status VARCHAR (50) NOT NULL,
+  addProductStore datetime,
+  editProductStore datetime, 
+  clearProductStore datetime, 
+      
+   PRIMARY KEY (Store_id )
+);
+
+CREATE TABLE AmProduct(
+  product_id   INT NOT NULL,
+  product_name VARCHAR (50) NOT NULL,
+  product_type VARCHAR (50) NOT NULL,
+  product_price VARCHAR (10) NOT NULL,
+  product_cost INT (10) NOT NULL,
+  product_total VARCHAR (10) NOT NULL,
+      
+   PRIMARY KEY (Product_id )
+);
+
+CREATE TABLE AmOrder(
+  Order_id   INT NOT NULL,
+  Product_id INT NOT NULL,
+  Product_name VARCHAR (50) NOT NULL,
+  Product_amount VARCHAR (10) NOT NULL,
+  Order_price VARCHAR (10) NOT NULL,
+  User_name VARCHAR (50) NOT NULL,
+  User_tel VARCHAR (10) NOT NULL,
+  User_address VARCHAR (50) NOT NULL,
+  Order_date datetime,
+  OderSent_date datetime,
+  Oder_status VARCHAR(20),
+   PRIMARY KEY (Order_id )
+);
